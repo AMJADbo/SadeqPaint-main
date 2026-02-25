@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SadeqPaint | Artisan peintre à Bordeaux</title>
+  <meta name="description" content="SadeqPaint - Artisan peintre à Bordeaux (+50 km). Peinture intérieure/extérieure, rénovation et finitions soignées. Découvrez nos réalisations." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Accueil SadeqPaint">
+        <span class="brand-mark">SP</span>
+        <span class="brand-text">
+          <span class="brand-name">SadeqPaint</span>
+          <span class="brand-tag">Artisan peintre • Bordeaux + 50 km</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Navigation">
+        <a href="#services">Services</a>
+        <a href="#realisations">Réalisations</a>
+        <a href="#apropos">À propos</a>
+        <a href="#contact" class="btn btn-primary">Devis</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <p class="pill">Disponible • Particuliers & Pros</p>
+        <h1 class="hero-title">Peinture soignée, finitions impeccables.</h1>
+        <p class="hero-sub">
+          Nous intervenons sur maisons, appartements et locaux : préparation des supports, protection du chantier,
+          application propre et nettoyage en fin de travaux.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Demander un devis</a>
+          <a class="btn btn-ghost" href="#realisations">Voir les réalisations</a>
+        </div>
+
+        <div class="hero-badges">
+          <div class="badge">
+            <span class="badge-kpi">+50 km</span>
+            <span class="badge-label">Autour de Bordeaux</span>
+          </div>
+          <div class="badge">
+            <span class="badge-kpi">Chantier propre</span>
+            <span class="badge-label">Protection & nettoyage</span>
+          </div>
+          <div class="badge">
+            <span class="badge-kpi">Devis rapide</span>
+            <span class="badge-label">Réponse sous 24–48h</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-media" aria-label="Aperçu réalisation">
+          <!--
+            ✅ Image principale (hero)
+            Mets une belle photo dans : assets/img/chantiers/
+            Puis remplace le src ci-dessous.
+          -->
+          <img src="assets/img/chantiers/hero.jpg" alt="Chantier peinture - photo principale (à remplacer)" loading="lazy" />
+        </div>
+
+        <div class="quick-card">
+          <h2>Infos rapides</h2>
+          <ul>
+            <li><strong>Téléphone :</strong> <a href="tel:+33700000059">+33 7 00 00 00 59</a></li>
+            <li><strong>Email :</strong> <a href="mailto:sadeqpaint@gmail.com">sadeqpaint@gmail.com</a></li>
+            <li><strong>Zone :</strong> Bordeaux + 50 km</li>
+          </ul>
+          <p class="muted">Astuce : envoyez une photo + surface approximative pour un devis plus rapide.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-head">
+        <h2>Services</h2>
+        <p>Des solutions adaptées à votre besoin, avec un résultat propre et durable.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Peinture intérieure</h3>
+          <p>Murs, plafonds, boiseries, enduits, rafraîchissement et finitions.</p>
+        </article>
+        <article class="card">
+          <h3>Peinture extérieure</h3>
+          <p>Façades, volets, portails, clôtures — protection contre les intempéries.</p>
+        </article>
+        <article class="card">
+          <h3>Rénovation & préparation</h3>
+          <p>Rebouchage, ponçage, sous-couche, protection des sols et des meubles.</p>
+        </article>
+        <article class="card">
+          <h3>Avant / Après</h3>
+          <p>Valorisation de votre bien : remise au propre, modernisation, harmonisation.</p>
+        </article>
+      </div>
+
+      <div class="cta">
+        <div>
+          <h3>Besoin d’un devis ?</h3>
+          <p>Appelez ou envoyez un message, réponse rapide.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="tel:+33700000059">Appeler</a>
+          <a class="btn btn-ghost" href="mailto:sadeqpaint@gmail.com">Email</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REALISATIONS / GALLERY -->
+  <section class="section" id="realisations">
+    <div class="container">
+      <div class="section-head">
+        <h2>Réalisations</h2>
+        <p>
+          Ajoutez vos photos dans <code>assets/img/chantiers/</code> puis remplacez les <em>placeholder</em>.
+        </p>
+      </div>
+
+      <div class="gallery">
+        <figure class="gallery-item">
+          <img src="assets/img/chantiers/placeholder-1.jpg" alt="Réalisation 1 (à remplacer)" loading="lazy" />
+          <figcaption>Intérieur</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="assets/img/chantiers/placeholder-2.jpg" alt="Réalisation 2 (à remplacer)" loading="lazy" />
+          <figcaption>Rénovation</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="assets/img/chantiers/placeholder-3.jpg" alt="Réalisation 3 (à remplacer)" loading="lazy" />
+          <figcaption>Finitions</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="assets/img/chantiers/placeholder-4.jpg" alt="Réalisation 4 (à remplacer)" loading="lazy" />
+          <figcaption>Extérieur</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="assets/img/chantiers/placeholder-5.jpg" alt="Réalisation 5 (à remplacer)" loading="lazy" />
+          <figcaption>Plafond</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="assets/img/chantiers/placeholder-6.jpg" alt="Réalisation 6 (à remplacer)" loading="lazy" />
+          <figcaption>Local</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="assets/img/chantiers/placeholder-7.jpg" alt="Réalisation 7 (à remplacer)" loading="lazy" />
+          <figcaption>Avant / Après</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="assets/img/chantiers/placeholder-8.jpg" alt="Réalisation 8 (à remplacer)" loading="lazy" />
+          <figcaption>Mur</figcaption>
+        </figure>
+      </div>
+
+      <p class="tip">Conseil : images JPG en 1600px (qualité ~75%) pour un site rapide.</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="apropos">
+    <div class="container about">
+      <div class="about-text">
+        <div class="section-head">
+          <h2>À propos</h2>
+          <p>Une entreprise de proximité, avec une exigence simple : un rendu net.</p>
+        </div>
+
+        <p>
+          SadeqPaint est une petite équipe d’artisans basée à Bordeaux.
+          Mon oncle travaille depuis plusieurs années sur des chantiers variés (maisons, appartements, locaux),
+          et il met un point d’honneur à faire les choses proprement : préparation des supports, protection,
+          application régulière, et finitions soignées.
+        </p>
+        <p>
+          L’objectif est clair : <strong>vous simplifier la vie</strong> et vous livrer un résultat que vous êtes fier de montrer.
+          Besoin de conseils couleurs, d’un rafraîchissement ou d’une rénovation complète ? On s’adapte à votre projet.
+        </p>
+
+        <div class="about-points">
+          <div class="point">✔ Travail propre & soigné</div>
+          <div class="point">✔ Respect des délais</div>
+          <div class="point">✔ Conseils & accompagnement</div>
+        </div>
+      </div>
+
+      <div class="about-media">
+        <!-- Photo "à propos" -->
+        <div class="photo">
+          <img src="assets/img/chantiers/about.jpg" alt="Photo d'équipe / chantier (à remplacer)" loading="lazy" />
+        </div>
+        <div class="mini-cta">
+          <h3>Parlons de votre projet</h3>
+          <p class="muted">Un message avec 2–3 photos suffit pour commencer.</p>
+          <div class="mini-cta-actions">
+            <a class="btn btn-primary" href="#contact">Demander un devis</a>
+            <a class="btn btn-ghost" href="#realisations">Voir la galerie</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p>Bordeaux + 50 km • réponse rapide</p>
+      </div>
+
+      <div class="contact">
+        <div class="contact-card">
+          <h3>Coordonnées</h3>
+          <p><strong>Téléphone :</strong> <a href="tel:+33700000059">+33 7 00 00 00 59</a></p>
+          <p><strong>Email :</strong> <a href="mailto:sadeqpaint@gmail.com">sadeqpaint@gmail.com</a></p>
+          <p><strong>Zone :</strong> Bordeaux + 50 km</p>
+        </div>
+
+        <div class="contact-card">
+          <h3>Message rapide</h3>
+          <p class="muted">Cliquez pour envoyer un email (décrivez la surface, les pièces et vos délais).</p>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="mailto:sadeqpaint@gmail.com?subject=Demande%20de%20devis%20-%20SadeqPaint">Envoyer un email</a>
+            <a class="btn btn-ghost" href="tel:+33700000059">Appeler</a>
+          </div>
+          <p class="tiny">(Vous pourrez ajouter un vrai formulaire plus tard si vous voulez.)</p>
+        </div>
+      </div>
+
+      <a class="backtop" href="#top">↑ Haut de page</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2026 SadeqPaint — Artisan peintre à Bordeaux</p>
+      <p class="tiny">Site vitrine • GitHub Pages</p>
+    </div>
+  </footer>
+
+</body>
+</html>
