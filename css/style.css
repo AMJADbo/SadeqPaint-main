@@ -1,259 +1,319 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SadeqPaint | Artisan peintre à Bordeaux</title>
-  <meta name="description" content="SadeqPaint - Artisan peintre à Bordeaux (+50 km). Peinture intérieure/extérieure, rénovation et finitions soignées. Découvrez nos réalisations." />
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
+:root{
+  --navy: #0f1b2d;
+  --navy-2: #0b1422;
+  --text: #eef3ff;
+  --muted: rgba(238,243,255,.75);
+  --line: rgba(238,243,255,.12);
 
-  <!-- HEADER -->
-  <header class="site-header" id="top">
-    <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="Accueil SadeqPaint">
-        <span class="brand-mark">SP</span>
-        <span class="brand-text">
-          <span class="brand-name">SadeqPaint</span>
-          <span class="brand-tag">Artisan peintre • Bordeaux + 50 km</span>
-        </span>
-      </a>
+  --orange: #ff8a4c;
+  --orange-2: #ffb38a;
 
-      <nav class="nav" aria-label="Navigation">
-        <a href="#services">Services</a>
-        <a href="#realisations">Réalisations</a>
-        <a href="#apropos">À propos</a>
-        <a href="#contact" class="btn btn-primary">Devis</a>
-      </nav>
-    </div>
-  </header>
+  --radius: 18px;
+  --shadow: 0 18px 45px rgba(0,0,0,.35);
+}
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-left">
-        <p class="pill">Disponible • Particuliers & Pros</p>
-        <h1 class="hero-title">Peinture soignée, finitions impeccables.</h1>
-        <p class="hero-sub">
-          Nous intervenons sur maisons, appartements et locaux : préparation des supports, protection du chantier,
-          application propre et nettoyage en fin de travaux.
-        </p>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(1100px 600px at 15% 0%, rgba(255,138,76,.18), transparent 55%),
+    radial-gradient(1000px 650px at 90% 10%, rgba(255,138,76,.10), transparent 60%),
+    radial-gradient(900px 700px at 80% 90%, rgba(255,179,138,.08), transparent 55%),
+    linear-gradient(180deg, var(--navy), var(--navy-2));
+}
 
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#contact">Demander un devis</a>
-          <a class="btn btn-ghost" href="#realisations">Voir les réalisations</a>
-        </div>
+a{color:inherit}
+img{max-width:100%; display:block}
+.container{width:min(1120px, calc(100% - 44px)); margin-inline:auto}
 
-        <div class="hero-badges">
-          <div class="badge">
-            <span class="badge-kpi">+50 km</span>
-            <span class="badge-label">Autour de Bordeaux</span>
-          </div>
-          <div class="badge">
-            <span class="badge-kpi">Chantier propre</span>
-            <span class="badge-label">Protection & nettoyage</span>
-          </div>
-          <div class="badge">
-            <span class="badge-kpi">Devis rapide</span>
-            <span class="badge-label">Réponse sous 24–48h</span>
-          </div>
-        </div>
-      </div>
+/* Header */
+.site-header{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(12px);
+  background: rgba(15,27,45,.72);
+  border-bottom: 1px solid var(--line);
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding: 14px 0;
+}
 
-      <div class="hero-right">
-        <div class="hero-media" aria-label="Aperçu réalisation">
-          <!--
-            ✅ Image principale (hero)
-            Mets une belle photo dans : assets/img/chantiers/
-            Puis remplace le src ci-dessous.
-          -->
-          <img src="assets/img/chantiers/hero.jpg" alt="Chantier peinture - photo principale (à remplacer)" loading="lazy" />
-        </div>
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+}
+.brand-mark{
+  width:44px;
+  height:44px;
+  border-radius: 14px;
+  display:grid;
+  place-items:center;
+  font-weight: 900;
+  letter-spacing: .5px;
+  background: linear-gradient(135deg, var(--orange), rgba(255,138,76,.55));
+  box-shadow: 0 14px 35px rgba(255,138,76,.18);
+  color: #1a2438;
+}
+.brand-text{display:flex; flex-direction:column; line-height:1.05}
+.brand-name{font-weight: 900}
+.brand-tag{font-size:.88rem; color: var(--muted); font-weight: 650}
 
-        <div class="quick-card">
-          <h2>Infos rapides</h2>
-          <ul>
-            <li><strong>Téléphone :</strong> <a href="tel:+33700000059">+33 7 00 00 00 59</a></li>
-            <li><strong>Email :</strong> <a href="mailto:sadeqpaint@gmail.com">sadeqpaint@gmail.com</a></li>
-            <li><strong>Zone :</strong> Bordeaux + 50 km</li>
-          </ul>
-          <p class="muted">Astuce : envoyez une photo + surface approximative pour un devis plus rapide.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+.nav{display:flex; gap: 16px; align-items:center; flex-wrap:wrap}
+.nav a{color: var(--muted); text-decoration:none; font-weight: 800; font-size:.96rem}
+.nav a:hover{color: var(--text)}
 
-  <!-- SERVICES -->
-  <section class="section" id="services">
-    <div class="container">
-      <div class="section-head">
-        <h2>Services</h2>
-        <p>Des solutions adaptées à votre besoin, avec un résultat propre et durable.</p>
-      </div>
+/* Buttons */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.04);
+  text-decoration:none;
+  font-weight: 900;
+}
+.btn:hover{transform: translateY(-1px)}
+.btn-primary{
+  border:none;
+  color: #1a2438;
+  background: linear-gradient(135deg, var(--orange), var(--orange-2));
+  box-shadow: 0 18px 35px rgba(255,138,76,.20);
+}
+.btn-ghost{background: rgba(255,255,255,.05)}
 
-      <div class="cards">
-        <article class="card">
-          <h3>Peinture intérieure</h3>
-          <p>Murs, plafonds, boiseries, enduits, rafraîchissement et finitions.</p>
-        </article>
-        <article class="card">
-          <h3>Peinture extérieure</h3>
-          <p>Façades, volets, portails, clôtures — protection contre les intempéries.</p>
-        </article>
-        <article class="card">
-          <h3>Rénovation & préparation</h3>
-          <p>Rebouchage, ponçage, sous-couche, protection des sols et des meubles.</p>
-        </article>
-        <article class="card">
-          <h3>Avant / Après</h3>
-          <p>Valorisation de votre bien : remise au propre, modernisation, harmonisation.</p>
-        </article>
-      </div>
+/* Hero */
+.hero{padding: 62px 0 24px}
+.hero-grid{
+  display:grid;
+  grid-template-columns: 1.08fr .92fr;
+  gap: 22px;
+  align-items: start;
+}
 
-      <div class="cta">
-        <div>
-          <h3>Besoin d’un devis ?</h3>
-          <p>Appelez ou envoyez un message, réponse rapide.</p>
-        </div>
-        <div class="cta-actions">
-          <a class="btn btn-primary" href="tel:+33700000059">Appeler</a>
-          <a class="btn btn-ghost" href="mailto:sadeqpaint@gmail.com">Email</a>
-        </div>
-      </div>
-    </div>
-  </section>
+.pill{
+  display:inline-flex;
+  align-items:center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.04);
+  color: var(--muted);
+  font-weight: 850;
+}
 
-  <!-- REALISATIONS / GALLERY -->
-  <section class="section" id="realisations">
-    <div class="container">
-      <div class="section-head">
-        <h2>Réalisations</h2>
-        <p>
-          Ajoutez vos photos dans <code>assets/img/chantiers/</code> puis remplacez les <em>placeholder</em>.
-        </p>
-      </div>
+.hero-title{
+  margin: 14px 0 10px;
+  font-size: clamp(2.15rem, 4.4vw, 3.2rem);
+  line-height: 1.05;
+  letter-spacing: -.02em;
+}
+.hero-sub{margin:0 0 16px; color: var(--muted); font-weight: 650}
 
-      <div class="gallery">
-        <figure class="gallery-item">
-          <img src="assets/img/chantiers/placeholder-1.jpg" alt="Réalisation 1 (à remplacer)" loading="lazy" />
-          <figcaption>Intérieur</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <img src="assets/img/chantiers/placeholder-2.jpg" alt="Réalisation 2 (à remplacer)" loading="lazy" />
-          <figcaption>Rénovation</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <img src="assets/img/chantiers/placeholder-3.jpg" alt="Réalisation 3 (à remplacer)" loading="lazy" />
-          <figcaption>Finitions</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <img src="assets/img/chantiers/placeholder-4.jpg" alt="Réalisation 4 (à remplacer)" loading="lazy" />
-          <figcaption>Extérieur</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <img src="assets/img/chantiers/placeholder-5.jpg" alt="Réalisation 5 (à remplacer)" loading="lazy" />
-          <figcaption>Plafond</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <img src="assets/img/chantiers/placeholder-6.jpg" alt="Réalisation 6 (à remplacer)" loading="lazy" />
-          <figcaption>Local</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <img src="assets/img/chantiers/placeholder-7.jpg" alt="Réalisation 7 (à remplacer)" loading="lazy" />
-          <figcaption>Avant / Après</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <img src="assets/img/chantiers/placeholder-8.jpg" alt="Réalisation 8 (à remplacer)" loading="lazy" />
-          <figcaption>Mur</figcaption>
-        </figure>
-      </div>
+.hero-actions{display:flex; gap: 12px; flex-wrap:wrap; margin: 18px 0 10px}
 
-      <p class="tip">Conseil : images JPG en 1600px (qualité ~75%) pour un site rapide.</p>
-    </div>
-  </section>
+.hero-badges{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 14px;
+}
+.badge{
+  padding: 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.04);
+}
+.badge-kpi{display:block; font-weight: 950}
+.badge-label{display:block; color: var(--muted); font-weight: 700; font-size:.92rem}
 
-  <!-- ABOUT -->
-  <section class="section" id="apropos">
-    <div class="container about">
-      <div class="about-text">
-        <div class="section-head">
-          <h2>À propos</h2>
-          <p>Une entreprise de proximité, avec une exigence simple : un rendu net.</p>
-        </div>
+.hero-right{display:flex; flex-direction:column; gap: 12px}
+.hero-media{
+  border-radius: var(--radius);
+  overflow:hidden;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.04);
+  box-shadow: var(--shadow);
+}
+.hero-media img{width:100%; height: 320px; object-fit: cover}
 
-        <p>
-          SadeqPaint est une petite équipe d’artisans basée à Bordeaux.
-          Mon oncle travaille depuis plusieurs années sur des chantiers variés (maisons, appartements, locaux),
-          et il met un point d’honneur à faire les choses proprement : préparation des supports, protection,
-          application régulière, et finitions soignées.
-        </p>
-        <p>
-          L’objectif est clair : <strong>vous simplifier la vie</strong> et vous livrer un résultat que vous êtes fier de montrer.
-          Besoin de conseils couleurs, d’un rafraîchissement ou d’une rénovation complète ? On s’adapte à votre projet.
-        </p>
+.quick-card{
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+  padding: 14px;
+}
+.quick-card h2{margin:0 0 10px; font-size: 1.05rem}
+.quick-card ul{list-style:none; padding:0; margin:0}
+.quick-card li{margin: 10px 0; color: var(--muted); font-weight: 750}
+.quick-card a{color: var(--text)}
 
-        <div class="about-points">
-          <div class="point">✔ Travail propre & soigné</div>
-          <div class="point">✔ Respect des délais</div>
-          <div class="point">✔ Conseils & accompagnement</div>
-        </div>
-      </div>
+/* Sections */
+.section{padding: 64px 0}
+.section-head{margin-bottom: 18px}
+.section-head h2{margin:0 0 8px; font-size: 1.9rem}
+.section-head p{margin:0; color: var(--muted); font-weight: 650}
 
-      <div class="about-media">
-        <!-- Photo "à propos" -->
-        <div class="photo">
-          <img src="assets/img/chantiers/about.jpg" alt="Photo d'équipe / chantier (à remplacer)" loading="lazy" />
-        </div>
-        <div class="mini-cta">
-          <h3>Parlons de votre projet</h3>
-          <p class="muted">Un message avec 2–3 photos suffit pour commencer.</p>
-          <div class="mini-cta-actions">
-            <a class="btn btn-primary" href="#contact">Demander un devis</a>
-            <a class="btn btn-ghost" href="#realisations">Voir la galerie</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+.cards{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 16px;
+}
+.card{
+  padding: 16px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.04);
+  box-shadow: 0 10px 25px rgba(0,0,0,.18);
+}
+.card h3{margin:0 0 8px}
+.card p{margin:0; color: var(--muted); font-weight: 650}
 
-  <!-- CONTACT -->
-  <section class="section" id="contact">
-    <div class="container">
-      <div class="section-head">
-        <h2>Contact</h2>
-        <p>Bordeaux + 50 km • réponse rapide</p>
-      </div>
+.cta{
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,.10);
+  background: linear-gradient(135deg, rgba(255,138,76,.18), rgba(255,255,255,.04));
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 14px;
+}
+.cta h3{margin:0}
+.cta p{margin:6px 0 0; color: var(--muted); font-weight: 650}
+.cta-actions{display:flex; gap:10px; flex-wrap:wrap}
 
-      <div class="contact">
-        <div class="contact-card">
-          <h3>Coordonnées</h3>
-          <p><strong>Téléphone :</strong> <a href="tel:+33700000059">+33 7 00 00 00 59</a></p>
-          <p><strong>Email :</strong> <a href="mailto:sadeqpaint@gmail.com">sadeqpaint@gmail.com</a></p>
-          <p><strong>Zone :</strong> Bordeaux + 50 km</p>
-        </div>
+/* Gallery */
+.gallery{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 16px;
+}
+.gallery-item{
+  margin:0;
+  border-radius: var(--radius);
+  overflow:hidden;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.04);
+  box-shadow: 0 12px 28px rgba(0,0,0,.22);
+}
+.gallery-item img{width:100%; height: 180px; object-fit: cover}
+.gallery-item figcaption{padding: 10px 12px; color: var(--muted); font-weight: 900}
 
-        <div class="contact-card">
-          <h3>Message rapide</h3>
-          <p class="muted">Cliquez pour envoyer un email (décrivez la surface, les pièces et vos délais).</p>
-          <div class="cta-actions">
-            <a class="btn btn-primary" href="mailto:sadeqpaint@gmail.com?subject=Demande%20de%20devis%20-%20SadeqPaint">Envoyer un email</a>
-            <a class="btn btn-ghost" href="tel:+33700000059">Appeler</a>
-          </div>
-          <p class="tiny">(Vous pourrez ajouter un vrai formulaire plus tard si vous voulez.)</p>
-        </div>
-      </div>
+.tip{margin-top: 12px; color: var(--muted); font-weight: 650}
+code{background: rgba(0,0,0,.25); padding: 2px 6px; border-radius: 8px; border: 1px solid rgba(255,255,255,.12)}
 
-      <a class="backtop" href="#top">↑ Haut de page</a>
-    </div>
-  </section>
+/* About */
+.about{
+  display:grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 18px;
+  align-items:start;
+}
+.about-text p{color: var(--muted); font-weight: 650}
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <p>© 2026 SadeqPaint — Artisan peintre à Bordeaux</p>
-      <p class="tiny">Site vitrine • GitHub Pages</p>
-    </div>
-  </footer>
+.about-points{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-top: 14px;
+}
+.point{
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.04);
+  font-weight: 850;
+  color: var(--text);
+}
 
-</body>
-</html>
+.about-media{display:flex; flex-direction:column; gap: 12px}
+.photo{
+  border-radius: var(--radius);
+  overflow:hidden;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.04);
+  box-shadow: var(--shadow);
+}
+.photo img{width:100%; height: 300px; object-fit: cover}
+
+.mini-cta{
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+  padding: 14px;
+}
+.mini-cta h3{margin:0 0 6px}
+.mini-cta-actions{display:flex; gap:10px; flex-wrap:wrap; margin-top: 10px}
+
+/* Contact */
+.contact{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 16px;
+}
+.contact-card{
+  padding: 16px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.04);
+}
+.contact-card h3{margin:0 0 10px}
+.contact-card a{font-weight: 950}
+
+.backtop{
+  display:inline-block;
+  margin-top: 16px;
+  color: var(--muted);
+  font-weight: 900;
+  text-decoration:none;
+}
+.backtop:hover{color: var(--text)}
+
+/* Footer */
+.footer{border-top: 1px solid var(--line); padding: 22px 0; background: rgba(0,0,0,.18)}
+.footer-inner{display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap}
+
+.muted{color: var(--muted)}
+.tiny{color: rgba(238,243,255,.65); font-size: .92rem; font-weight: 650}
+
+/* Responsive */
+@media (max-width: 980px){
+  .hero-grid{grid-template-columns: 1fr}
+  .hero-badges{grid-template-columns: 1fr}
+  .cards{grid-template-columns: repeat(2, 1fr)}
+  .gallery{grid-template-columns: repeat(2, 1fr)}
+  .about{grid-template-columns: 1fr}
+  .contact{grid-template-columns: 1fr}
+}
+
+@media (max-width: 560px){
+  .container{width: calc(100% - 28px)}
+  .nav{gap:12px}
+  .nav a{font-size:.92rem}
+  .hero-media img{height: 240px}
+  .photo img{height: 240px}
+}
+.map-image{
+  width:100%;
+  height:auto;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: 0 18px 45px rgba(0,0,0,.35);
+}
